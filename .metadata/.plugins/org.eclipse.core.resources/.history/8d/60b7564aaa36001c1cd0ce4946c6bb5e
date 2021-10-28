@@ -1,0 +1,32 @@
+package com.nydhal.equipes;
+
+import java.util.Date;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import com.nydhal.equipes.entities.Equipe;
+import com.nydhal.equipes.repos.EquipeRepository;
+@SpringBootTest
+class ProduitsApplicationTests {
+@Autowired
+private EquipeRepository EquipeRepository;
+@Test
+public void testCreateEquipe() {
+Equipe prod = new Equipe("PC Dell",2200.500,new Date());
+EquipeRepository.save(prod);
+}
+@Test
+public void testFindEquipe()
+{
+Equipe E = EquipeRepository.findById(1L).get();
+
+System.out.println(E);
+}
+@Test
+public void testUpdateEquipe()
+{
+Equipe E = EquipeRepository.findById(1L).get();
+E.setPrixProduit(1000.0);
+EquipeRepository.save(E);
+}
+}
