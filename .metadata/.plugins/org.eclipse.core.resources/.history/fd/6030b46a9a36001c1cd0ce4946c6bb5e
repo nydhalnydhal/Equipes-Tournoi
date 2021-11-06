@@ -1,7 +1,0 @@
-package com.nydhal.equipes.repos;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface EquipeRepository extends JpaRepository<T, ID> {
-
-}

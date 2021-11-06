@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 @Entity
 public class Equipe {
 @Id
@@ -13,6 +15,8 @@ private Long idEquipe;
 private String nomEquipe;
 private Double prixEquipe;
 private Date dateCreation;
+@ManyToOne
+private Tournoi tournoi;
 public Equipe() {
 super();
 }
@@ -31,7 +35,7 @@ public Long getIdEquipe() {
 	public String getNomEquipe() {
 	return nomEquipe;
 	}
-	public void setNomProduit(String nomEquipe) {
+	public void setNomEquipe(String nomEquipe) {
 	this.nomEquipe = nomEquipe;
 	}
 	public Double getPrixEquipe() {
@@ -54,6 +58,12 @@ public Long getIdEquipe() {
 
 	+ ", dateCreation=" + dateCreation + "]";
 
+	}
+	public Tournoi getTournoi() {
+		return tournoi;
+	}
+	public void setTournoi(Tournoi tournoi) {
+		this.tournoi = tournoi;
 	}
 	
 		

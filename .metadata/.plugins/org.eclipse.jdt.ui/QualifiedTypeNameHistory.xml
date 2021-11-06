@@ -2,6 +2,12 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.nydhal.equipes.entities.Equipe"/>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
+    <fullyQualifiedTypeName name="com.nydhal.equipes.entities.Tournoi"/>
 </qualifiedTypeNameHistroy>

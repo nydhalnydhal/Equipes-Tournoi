@@ -1,5 +1,0 @@
-package com.nydhal.equipes.service;
-
-public interface EquipeService {
-
-}

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.nydhal.equipes.entities.Equipe;
+import com.nydhal.equipes.entities.Tournoi;
 import com.nydhal.equipes.repos.EquipeRepository;
 @Service
 public class EquipeServiceimpl implements EquipeService {
@@ -34,4 +35,33 @@ return  equipeRepository.findById(id).get();
 public List< Equipe> getAllEquipes() {
 return  equipeRepository.findAll();
 }
+@Override
+public List<Equipe> findByNomEquipe(String nom) {
+return equipeRepository.findByNomEquipe(nom);
+}
+@Override
+public List<Equipe> findByNomEquipeContains(String nom) {
+return equipeRepository.findByNomEquipeContains(nom);
+}
+@Override
+public List<Equipe> findByNomPrix(String nom, Double prix) {
+	return equipeRepository.findByNomPrix(nom, prix);
+	}
+	@Override
+	public List<Equipe> findByTournoi(Tournoi tournoi) {
+	return equipeRepository.findByTournoi(tournoi);
+	}
+	@Override
+	public List<Equipe> findByTournoiIdTou(Long id) {
+	return equipeRepository.findByTournoiIdTou(id);
+	}
+	@Override
+	
+	public List<Equipe> findByOrderByNomTournoiAsc() {
+		return equipeRepository.findByOrderByNomEquipeAsc();
+	}
+	@Override
+	public List<Equipe> trierTournoisNomsPrix() {
+		return equipeRepository.trierEquipesNomsPrix();
+	}
 }
