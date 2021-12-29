@@ -24,6 +24,7 @@ public class Tournoi {
 	private String descriptionTou;
 	@JsonIgnore
 	@OneToMany(mappedBy = "tournoi")
+	
 	private List<Equipe> equipes;
 	
 	
